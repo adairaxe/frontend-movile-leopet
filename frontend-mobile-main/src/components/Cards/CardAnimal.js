@@ -92,18 +92,11 @@ const Animales = (props) => {
               <ActivityIndicator size="large" color={Colors.darklight} />
               <Text style={{ textAlign: 'center' }}>Cargando Imagen...</Text>
             </View>
-          ) : galeria == null ? (
-            <Card.Image
-              style={{ padding: 0, margin: 2, width: 180, height: 120, overflow: 'hidden', borderRadius: 15 }}
-              source={{
-                uri: '',
-              }}
-            />
           ) : (
             <Card.Image
               style={{ padding: 0, margin: 2, width: 180, height: 120, overflow: 'hidden', borderRadius: 15 }}
               source={{
-                uri: galeria.fotos[0],
+                uri: imagen,
               }}
             />
           )}
