@@ -12,3 +12,9 @@ web-build/
 
 # macOS
 .DS_Store
+
+# Ignorar el archivo package-lock.json
+package-lock.json
+
+# Ignorar el archivo Config.js
+Config.js
