@@ -87,6 +87,24 @@ const MenuItems=({navigation})=>{
     }
   };
 
+  const perfil = async () => {
+    try {
+      await AsyncStorage.removeItem('session');
+      navigation.navigate('Perfil');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const suscripcion = async () => {
+    try {
+      await AsyncStorage.removeItem('session');
+      navigation.navigate('Suscripcion');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const extraerUsuario= async()=>{
     const jsonValue = await AsyncStorage.getItem('session');
     const data = await JSON.parse(jsonValue);    
@@ -114,13 +132,13 @@ const MenuItems=({navigation})=>{
 
     <View style={styles.btnContainer}>
       <Ionicons name="paw" size={15} color={Colors.greenPet} />
-      <TouchableOpacity style={styles.btnContainer}>
+      <TouchableOpacity style={styles.btnContainer} onPress={suscripcion}>
           <Text style={styles.btnText}>Suscripción</Text>
         </TouchableOpacity>
     </View>
     <View style={styles.btnContainer}>
       <Ionicons name="person" size={15} color={Colors.greenPet} />
-      <TouchableOpacity style={styles.btnContainer}>
+      <TouchableOpacity style={styles.btnContainer} onPress={perfil}>
           <Text style={styles.btnText}>Perfil</Text>
         </TouchableOpacity>
     </View>
