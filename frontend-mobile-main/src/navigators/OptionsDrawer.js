@@ -40,17 +40,6 @@ import BatchedBridge from 'react-native/Libraries/BatchedBridge/BatchedBridge';
 const Drawer = createDrawerNavigator();
 
 export default function OptionsDrawer() {
-  /* return (
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Animales" component={HomeTab} />
-        <Drawer.Screen name="Perfil" component={Perfil} />
-        <Drawer.Screen name="Suscripción" component={Suscripcion} />
-        <Drawer.Screen name="Cerrar sesión" component={HomeTab} />
-      </Drawer.Navigator>
-  );
-} 
- */
-  /* export function DrawerNavigation(){ */
   return (
     <Drawer.Navigator initialRouteName="Home"
       drawerContent={(props) => <MenuItems {...props} />}
@@ -63,7 +52,6 @@ export default function OptionsDrawer() {
       <Drawer.Screen name="Cerrar sesión" component={HomeTab} />
     </Drawer.Navigator>
   );
-
 }
 
 const MenuItems = ({ navigation }) => {
@@ -76,8 +64,6 @@ const MenuItems = ({ navigation }) => {
     //});
   }, []);
 
-
-
   const logout = async () => {
     try {
       await AsyncStorage.removeItem('session');
@@ -88,7 +74,7 @@ const MenuItems = ({ navigation }) => {
   };
 
   const perfil = async () => {
-    try {      
+    try {
       navigation.navigate('Perfil');
     } catch (error) {
       console.log(error);
@@ -96,7 +82,7 @@ const MenuItems = ({ navigation }) => {
   };
 
   const suscripcion = async () => {
-    try {      
+    try {
       navigation.navigate('Suscripcion');
     } catch (error) {
       console.log(error);
@@ -104,7 +90,7 @@ const MenuItems = ({ navigation }) => {
   };
 
   const animales = async () => {
-    try {      
+    try {
       navigation.navigate('Home');
     } catch (error) {
       console.log(error);
@@ -161,8 +147,6 @@ const MenuItems = ({ navigation }) => {
           <Text style={styles.btnText}>Cerrar sesión</Text>
         </TouchableOpacity>
       </View>
-
-
 
     </DrawerContentScrollView>
 
