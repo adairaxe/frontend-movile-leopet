@@ -6,10 +6,3 @@ node_modules
 
 # Ignora archivos de configuración SASS
 .sass-cache
-
-
-# Ignorar el archivo package-lock.json
-package-lock.json
-
-# Ignorar el archivo Config.js
-Config.js
