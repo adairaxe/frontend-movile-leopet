@@ -32,7 +32,6 @@ const Animales = (props) => {
     eliminarAnimalManada,
     galeria,
   } = props;
-
   const iconoEspecie = () => {
     let DEFAULT_IMAGE = { image: require('../../assets/icons/paw.png') };
     switch (especie) {
@@ -87,16 +86,23 @@ const Animales = (props) => {
 
       <View style={{ flexDirection: 'column' }}>
         <View style={{ flexDirection: 'row' }}>
-          {!imagen ? (
+          {!imagen && !galeria ? (
             <View>
               <ActivityIndicator size="large" color={Colors.darklight} />
               <Text style={{ textAlign: 'center' }}>Cargando Imagen...</Text>
             </View>
           ) : (
             <Card.Image
-              style={{ padding: 0, margin: 2, width: 180, height: 120, overflow: 'hidden', borderRadius: 15 }}
+              style={{
+                padding: 0,
+                margin: 2,
+                width: 180,
+                height: 120,
+                overflow: 'hidden',
+                borderRadius: 15,
+              }}
               source={{
-                uri: imagen,
+                uri: imagen || (galeria?.fotos && galeria.fotos.length ? galeria.fotos[0] : null),
               }}
             />
           )}
