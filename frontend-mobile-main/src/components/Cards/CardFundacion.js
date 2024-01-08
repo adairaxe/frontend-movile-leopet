@@ -11,7 +11,7 @@ const CardFundacion = (props) => {
   const { id, nombre, direccion, logo, telefono, email } = props;
 
   return (
-    <Card containerStyle={{ width: '80%', borderRadius: 15, elevation: 8, paddingTop: 10 }}>
+    <Card containerStyle={{ width:330, height:190, borderRadius: 15, elevation: 8, paddingTop: 10 }}>
       {/*        
       <View style={{flexDirection:'column', paddingBottom:2}}>
         <Card.Title style={{ textAlign:'left',fontSize: 20, justifyContent: 'center', alignItems:'center', marginLeft:8, marginBottom:2, marginTop:0}}>

@@ -143,7 +143,7 @@ const AddAnimal = ({ route, navigation }) => {
           <PageTitle>Mis manadas</PageTitle>
           {/*  <Subtitle>Tus manadas</Subtitle> */}
           <Text style={{ color: Colors.black, fontSize: 18, margin: 20, fontWeight: 'bold' }}>
-            Puedes agregar a {nombre} a alguna de tus manadas manadas
+            Puedes agregar a {nombre} a alguna de tus manadas
           </Text>
           <TouchableOpacity
             onPress={() =>

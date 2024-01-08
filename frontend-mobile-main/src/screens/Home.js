@@ -90,7 +90,7 @@ const Welcome = ({ navigation }) => {
       });
   };
   const loadAnimal = (navigation) => {
-    return animals.map((animal) => {
+    return animals.map((animal) => {     
       return (
         <TouchableOpacity
           key={animal.id}
