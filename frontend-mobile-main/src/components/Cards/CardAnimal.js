@@ -61,7 +61,7 @@ const Animales = (props) => {
   };
 
   return (
-    <Card containerStyle={{ height: 180, borderRadius: 15, elevation: 8, justifyContent: 'center' }}>
+    <Card containerStyle={{ width:330, height: 180, borderRadius: 15, elevation: 8, justifyContent: 'center' }}>
       <View style={{ flexDirection: 'row', paddingBottom: 2, justifyContent: 'flex-end' }}>
         {/* <View style={{flex:2, flexDirection:'column'}}>
           <Card.Title style={{ textAlign:'left',fontSize: 25, justifyContent: 'center', alignItems:'center', marginLeft:8, marginBottom:2, marginTop:0}}> 

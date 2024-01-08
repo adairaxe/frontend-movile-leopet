@@ -33,7 +33,7 @@ const CardManada = ({
   };
 
   return (
-    <Card containerStyle={{ width: '100%', height: 180, borderRadius: 15, elevation: 8, justifyContent: 'center' }}>
+    <Card containerStyle={{ width:320, height: 180, borderRadius: 15, elevation: 8, justifyContent: 'center' }}>
       <View style={{ flexDirection: 'row', paddingBottom: 2, justifyContent: 'flex-start' }}>
         <View style={{ flex: 2, flexDirection: 'column' }}>
           <Card.Title
